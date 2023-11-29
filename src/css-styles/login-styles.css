@@ -1,0 +1,780 @@
+:root {
+    --glow-color: hsl(186 100% 69%);
+    --glow-color2: hsl(270, 100%, 50%);
+
+}
+
+
+.login-container{
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 5;
+}
+form {
+    border: 3px solid var(--glow-color);
+    border-radius: 30px;
+    padding: 20px;
+    width: 500px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: black;
+    color: var(--glow-color);
+    font-size: 18px;
+    z-index: 5;
+    
+}
+.form-group{
+    display: flex;
+}
+
+.register {
+    font-size: 20px;
+    color: var(--glow-color2);
+}
+
+.register:hover{
+    font-style: italic;
+    color: var(--glow-color);
+    font-weight: bold;  
+
+}
+
+#loginForm1 {
+    text-align: center;
+    max-width: 400px;
+    z-index: 5;
+    transform: scale(0.8) 
+}
+
+#loginForm1 h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+    animation: border-flicker 2s linear infinite;
+    font-family: 'HotSweat';
+    color: var(--glow-color2);
+    z-index: 5;
+    
+
+}
+p {
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: left; 
+    margin-left: 0;
+    z-index: 5;
+  }
+
+#loginForm1 .form-row {
+    text-align: left;
+    margin-bottom: 10px;
+    z-index: 5;
+}
+
+#loginForm1 label {
+    display: inline-block;
+    width: 40%;
+    z-index: 5;
+}
+
+
+#loginForm1 input,
+#loginForm1 select {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--glow-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px var(--glow-color2);
+    margin-right: 25px;
+    z-index: 5;
+}
+
+.glowing-btn {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.25em 0.75em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.3em;
+    background: none;
+    perspective: 2em;
+    font-family: 'HotSweat';
+    font-size: 1.1em;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+    font-size: 15px;
+}
+
+.faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+    color: black; 
+    background-color: var(--glow-color2); 
+    text-shadow: none; 
+    animation: none;
+    box-shadow: 0px 0px 80px var(--glow-color);
+    font-style: italic;
+    animation: text-flicker 3s linear infinite;
+}
+
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn:hover:after {
+    opacity: 1;
+}
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.5;
+    }
+
+    19% {
+        opacity: 0.5;
+    }
+
+    21% {
+        opacity: 0.1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Manji Mobilni Telefoni */
+@media all 
+and (max-width : 360px)  { 
+    .login-container{
+        
+        top: 50px;
+        left: 10%;
+        z-index: 7;
+      }
+      form {
+          border: 3px solid var(--glow-color);
+          border-radius: 30px;
+          padding: 20px;
+          width: 300px;
+          max-width: 300px;
+          margin: 0 auto;
+          background-color: black;
+          color: var(--glow-color);
+          font-size: 13px;
+          z-index: 7;
+          
+      }
+      .form-group{
+          display: flex;
+      }
+      
+      .register {
+          font-size: 15px;
+          color: var(--glow-color2);
+      }
+      
+      .register:hover{
+          font-style: italic;
+          color: var(--glow-color);
+          font-weight: bold;  
+      
+      }
+      
+      #loginForm1 {
+          text-align: center;
+          max-width: 300px;
+          z-index: 7;
+          transform: scale(0.8) 
+      }
+      
+      #loginForm1 h1 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          text-decoration: underline;
+          animation: border-flicker 2s linear infinite;
+          font-family: 'HotSweat';
+          color: var(--glow-color2);
+          z-index: 5;
+          
+      
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      
+      h2 {
+          text-align: left; 
+          margin-left: 0;
+          z-index: 5;
+        }
+      
+      #loginForm1 .form-row {
+          text-align: left;
+          margin-bottom: 10px;
+          z-index: 5;
+      }
+      
+      #loginForm1 label {
+          display: inline-block;
+          width: 40%;
+          z-index: 5;
+      }
+      
+      
+      #loginForm1 input,
+      #loginForm1 select {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 3px solid var(--glow-color);
+          border-radius: 5px;
+          box-shadow: 0px 0px 50px var(--glow-color2);
+          margin-right: 25px;
+          z-index: 5;
+          
+      }
+}
+/* Veci Mobilni Telefoni */
+@media all
+and (min-device-width : 361px) 
+and (max-device-width : 520px) {
+    .login-container{
+        
+        top: 50px;
+        left: 10%;
+        z-index: 7;
+      }
+      form {
+          border: 3px solid var(--glow-color);
+          border-radius: 30px;
+          padding: 20px;
+          width: 300px;
+          max-width: 300px;
+          margin: 0 auto;
+          background-color: black;
+          color: var(--glow-color);
+          font-size: 13px;
+          z-index: 7;
+          
+      }
+      .form-group{
+          display: flex;
+      }
+      
+      .register {
+          font-size: 15px;
+          color: var(--glow-color2);
+      }
+      
+      .register:hover{
+          font-style: italic;
+          color: var(--glow-color);
+          font-weight: bold;  
+      
+      }
+      
+      #loginForm1 {
+          text-align: center;
+          max-width: 300px;
+          z-index: 7;
+          transform: scale(0.8) 
+      }
+      
+      #loginForm1 h1 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          text-decoration: underline;
+          animation: border-flicker 2s linear infinite;
+          font-family: 'HotSweat';
+          color: var(--glow-color2);
+          z-index: 5;
+          
+      
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      
+      h2 {
+          text-align: left; 
+          margin-left: 0;
+          z-index: 5;
+        }
+      
+      #loginForm1 .form-row {
+          text-align: left;
+          margin-bottom: 10px;
+          z-index: 5;
+      }
+      
+      #loginForm1 label {
+          display: inline-block;
+          width: 40%;
+          z-index: 5;
+      }
+      
+      
+      #loginForm1 input,
+      #loginForm1 select {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 3px solid var(--glow-color);
+          border-radius: 5px;
+          box-shadow: 0px 0px 50px var(--glow-color2);
+          margin-right: 25px;
+          z-index: 5;
+          
+      }
+}
+/* SREDNJA VELICINA 521 do 721 */
+@media all
+and (min-device-width : 521px) 
+and (max-device-width : 721px) {
+    .login-container{
+        
+        top: 50px;
+        left: 10%;
+        z-index: 7;
+      }
+      form {
+          border: 3px solid var(--glow-color);
+          border-radius: 30px;
+          padding: 20px;
+          width: 300px;
+          max-width: 300px;
+          margin: 0 auto;
+          background-color: black;
+          color: var(--glow-color);
+          font-size: 13px;
+          z-index: 7;
+          
+      }
+      .form-group{
+          display: flex;
+      }
+      
+      .register {
+          font-size: 15px;
+          color: var(--glow-color2);
+      }
+      
+      .register:hover{
+          font-style: italic;
+          color: var(--glow-color);
+          font-weight: bold;  
+      
+      }
+      
+      #loginForm1 {
+          text-align: center;
+          max-width: 300px;
+          z-index: 7;
+          transform: scale(0.8) 
+      }
+      
+      #loginForm1 h1 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          text-decoration: underline;
+          animation: border-flicker 2s linear infinite;
+          font-family: 'HotSweat';
+          color: var(--glow-color2);
+          z-index: 5;
+          
+      
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      
+      h2 {
+          text-align: left; 
+          margin-left: 0;
+          z-index: 5;
+        }
+      
+      #loginForm1 .form-row {
+          text-align: left;
+          margin-bottom: 10px;
+          z-index: 5;
+      }
+      
+      #loginForm1 label {
+          display: inline-block;
+          width: 40%;
+          z-index: 5;
+      }
+      
+      
+      #loginForm1 input,
+      #loginForm1 select {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 3px solid var(--glow-color);
+          border-radius: 5px;
+          box-shadow: 0px 0px 50px var(--glow-color2);
+          margin-right: 25px;
+          z-index: 5;
+          
+      }
+}
+/* SREDNJA VELICINA 721 do 1024 */
+@media all
+and (min-device-width : 722px) 
+and (max-device-width : 1024px) {
+    .login-container{
+        
+        top: 50px;
+        left: 10%;
+        z-index: 7;
+      }
+      form {
+          border: 3px solid var(--glow-color);
+          border-radius: 30px;
+          padding: 20px;
+          width: 300px;
+          max-width: 300px;
+          margin: 0 auto;
+          background-color: black;
+          color: var(--glow-color);
+          font-size: 13px;
+          z-index: 7;
+          
+      }
+      .form-group{
+          display: flex;
+      }
+      
+      .register {
+          font-size: 15px;
+          color: var(--glow-color2);
+      }
+      
+      .register:hover{
+          font-style: italic;
+          color: var(--glow-color);
+          font-weight: bold;  
+      
+      }
+      
+      #loginForm1 {
+          text-align: center;
+          max-width: 300px;
+          z-index: 7;
+          transform: scale(0.8) 
+      }
+      
+      #loginForm1 h1 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          text-decoration: underline;
+          animation: border-flicker 2s linear infinite;
+          font-family: 'HotSweat';
+          color: var(--glow-color2);
+          z-index: 5;
+          
+      
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      
+      h2 {
+          text-align: left; 
+          margin-left: 0;
+          z-index: 5;
+        }
+      
+      #loginForm1 .form-row {
+          text-align: left;
+          margin-bottom: 10px;
+          z-index: 5;
+      }
+      
+      #loginForm1 label {
+          display: inline-block;
+          width: 40%;
+          z-index: 5;
+      }
+      
+      
+      #loginForm1 input,
+      #loginForm1 select {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 3px solid var(--glow-color);
+          border-radius: 5px;
+          box-shadow: 0px 0px 50px var(--glow-color2);
+          margin-right: 25px;
+          z-index: 5;
+          
+      }
+}
+/* FULL HD :D od 1024 */
+@media all
+and (min-device-width : 1025px) 
+and (max-device-width : 1920px) {
+    .login-container{
+        
+        top: 50px;
+        left: 10%;
+        z-index: 7;
+      }
+      form {
+          border: 3px solid var(--glow-color);
+          border-radius: 30px;
+          padding: 20px;
+          width: 300px;
+          max-width: 300px;
+          margin: 0 auto;
+          background-color: black;
+          color: var(--glow-color);
+          font-size: 13px;
+          z-index: 7;
+          
+      }
+      .form-group{
+          display: flex;
+      }
+      
+      .register {
+          font-size: 15px;
+          color: var(--glow-color2);
+      }
+      
+      .register:hover{
+          font-style: italic;
+          color: var(--glow-color);
+          font-weight: bold;  
+      
+      }
+      
+      #loginForm1 {
+          text-align: center;
+          max-width: 300px;
+          z-index: 7;
+          transform: scale(0.8) 
+      }
+      
+      #loginForm1 h1 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          text-align: center;
+          text-decoration: underline;
+          animation: border-flicker 2s linear infinite;
+          font-family: 'HotSweat';
+          color: var(--glow-color2);
+          z-index: 5;
+          
+      
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      
+      h2 {
+          text-align: left; 
+          margin-left: 0;
+          z-index: 5;
+        }
+      
+      #loginForm1 .form-row {
+          text-align: left;
+          margin-bottom: 10px;
+          z-index: 5;
+      }
+      
+      #loginForm1 label {
+          display: inline-block;
+          width: 40%;
+          z-index: 5;
+      }
+      
+      
+      #loginForm1 input,
+      #loginForm1 select {
+          display: inline-block;
+          width: 50%;
+          margin-bottom: 20px;
+          border: 3px solid var(--glow-color);
+          border-radius: 5px;
+          box-shadow: 0px 0px 50px var(--glow-color2);
+          margin-right: 25px;
+          z-index: 5;
+          
+      }
+}
+
+

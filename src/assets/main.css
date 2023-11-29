@@ -1,0 +1,739 @@
+* {
+  margin: 0;
+}
+#app {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  background-image: url("../assets/PozadinaHome.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 40px;
+  filter: drop-shadow(0px 0px 20px rgb(255, 2, 255));
+}
+.logo1 {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+/* NASLOV */
+.Naslov {
+  position: absolute;
+  top: 60px;
+  left: 720px;
+  font-size: 2.5rem;
+  color: whitesmoke;
+  text-shadow: 0px 10px 40px purple;
+  font-family: "HotSweat";
+  text-decoration: none;
+}
+.Quote {
+  color: whitesmoke;
+  text-shadow: 0px 10px 60px purple;
+  position: absolute;
+  top: 870px;
+  left: 650px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  text-decoration: none;
+  filter: drop-shadow(0px 0px 15px black);
+}
+.MotivationQuotes {
+  color: whitesmoke;
+  text-shadow: 0px 10px 60px purple;
+  position: absolute;
+  top: 150px;
+  left: 750px;
+  font-size: 2rem;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+/* NAV BAR 1 i 2 */
+.nav1 a {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  width: 500px;
+  cursor: pointer;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-decoration: none;
+  margin-right: 5px;
+  text-shadow: 0px 10px 60px purple;
+  font-family: "HotSweat";
+  z-index: 3;
+}
+.nav2 a {
+  position: relative;
+  left: 1200px;
+  width: 500px;
+  cursor: pointer;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-decoration: none;
+  margin-right: 5px;
+  text-shadow: 0px 10px 60px purple;
+  font-family: "HotSweat";
+  z-index: 3;
+}
+.nav1 a:hover,
+.nav2 a:hover {
+  color: purple;
+}
+/* KOCKICE NA POZADINI */
+.additional-image1 {
+  width: 500px;
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  z-index: -1;
+}
+.additional-image2 {
+  width: 500px;
+  position: absolute;
+  top: 400px;
+  left: 30px;
+  z-index: 0;
+}
+.additional-image3 {
+  width: 500px;
+  position: absolute;
+  top: 600px;
+  left: 50px;
+  z-index: 0;
+}
+/* DEKORACIJA NA SREDINI */
+.circle {
+  position: absolute;
+  top: 550px;
+  left: 900px;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  z-index: 2;
+  animation: rotate360 15s linear infinite;
+}
+.gymRats {
+  position: absolute;
+  top: 300px;
+  left: 650px;
+  width: 500px;
+  height: 550px;
+  z-index: 3;
+}
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%, -56%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -56%) rotate(1turn);
+  }
+}
+.heartrate {
+  position: absolute;
+  top: 330px;
+  left: 1050px;
+  width: 200px;
+  height: 80px;
+  z-index: 3;
+}
+.heartrate {
+  animation: move 3s linear infinite alternate;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, 10px);
+  }
+
+  100% {
+    transform: translate(5px, 20px);
+  }
+}
+.CLBurned {
+  position: absolute;
+  top: 450px;
+  left: 450px;
+  width: 220px;
+  height: 100px;
+  z-index: 3;
+}
+.CLBurned {
+  animation: move 2.5s linear infinite alternate;
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, 10px);
+  }
+  100% {
+    transform: translate(5px, 20px);
+  }
+}
+/* MEDIA SCREEN */
+/* Media queries za mobilne telefone 360px x 740px */
+@media all and (max-width: 360px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/PozadinaHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+  }
+  .Naslov {
+    left: 50%;
+    top: 30px;
+    font-size: 1rem;
+    width: 350px;
+  }
+  .nav1 a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    top: 20px;
+    left: 10px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .space {
+    margin-bottom: 25px;
+  }
+  .nav2 a {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    left: 10px;
+    width: 100%;
+    font-size: 10px;
+  }
+  .Quote {
+    top: 700px;
+    left: 35%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .MotivationQuotes {
+    top: 100px;
+    left: 40%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .circle {
+    margin-left: 100px;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 2;
+    animation: rotate360 15s linear infinite;
+  }
+  .gymRats {
+    top: 300px;
+    left: 55%;
+    width: 350px;
+    height: 350px;
+    z-index: 3;
+    margin-left: -100px;
+  }
+  @keyframes rotate360 {
+    0% {
+      transform: translate(-50%, -56%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -56%) rotate(1turn);
+    }
+  }
+  .heartrate {
+    margin-left: 300px;
+    top: 300px;
+    left: 30%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .heartrate {
+    animation: move 3s linear infinite alternate;
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-5px, 10px);
+    }
+    100% {
+      transform: translate(5px, 20px);
+    }
+  }
+  .CLBurned {
+    top: 500px;
+    left: 10%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .CLBurned {
+    animation: move 2.5s linear infinite alternate;
+  }
+}
+/* Media queries za tablet */
+@media all and (min-device-width: 361px) and (max-device-width: 520px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/PozadinaHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    top: 10px;
+    left: 2%;
+    width: 20px;
+  }
+  .Naslov {
+    left: 30%;
+    top: 50px;
+    font-size: 1rem;
+    width: 350px;
+  }
+  .nav1 a {
+    width: 100%;
+    top: 25px;
+    left: 2%;
+    font-size: 7px;
+  }
+  .nav2 a {
+    top: 6px;
+    left: 50%;
+    width: 100%;
+    font-size: 7px;
+  }
+  .Quote {
+    top: 700px;
+    left: 20%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .MotivationQuotes {
+    top: 100px;
+    left: 25%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .circle {
+    position: absolute;
+    top: 450px;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    z-index: 2;
+    animation: rotate360 15s linear infinite;
+  }
+  .gymRats {
+    position: absolute;
+    top: 300px;
+    left: 20%;
+    width: 350px;
+    height: 350px;
+    z-index: 3;
+  }
+  @keyframes rotate360 {
+    0% {
+      transform: translate(-50%, -56%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -56%) rotate(1turn);
+    }
+  }
+  .heartrate {
+    position: absolute;
+    top: 300px;
+    left: 95%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .heartrate {
+    animation: move 3s linear infinite alternate;
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-5px, 10px);
+    }
+    100% {
+      transform: translate(5px, 20px);
+    }
+  }
+  .CLBurned {
+    position: absolute;
+    top: 500px;
+    left: 10%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .CLBurned {
+    animation: move 2.5s linear infinite alternate;
+  }
+}
+/* Media queries za velicinu od 521 do 721 */
+@media all and (min-device-width: 521px) and (max-device-width: 721px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/PozadinaHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    top: 10px;
+    left: 2%;
+    width: 40px;
+  }
+  .Naslov {
+    left: 30%;
+    top: 50px;
+    font-size: 1.5rem;
+    width: 350px;
+  }
+  .nav1 a {
+    width: 100%;
+    top: 25px;
+    left: 7%;
+    font-size: 8px;
+  }
+  .nav2 a {
+    top: 6px;
+    left: 50%;
+    width: 100%;
+    font-size: 8px;
+  }
+  .Quote {
+    top: 700px;
+    left: 30%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .MotivationQuotes {
+    top: 100px;
+    left: 32%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .circle {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    z-index: 2;
+    animation: rotate360 15s linear infinite;
+  }
+  .gymRats {
+    position: absolute;
+    top: 300px;
+    left: 25%;
+    width: 350px;
+    height: 350px;
+    z-index: 3;
+  }
+  @keyframes rotate360 {
+    0% {
+      transform: translate(-50%, -56%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -56%) rotate(1turn);
+    }
+  }
+  .heartrate {
+    position: absolute;
+    top: 300px;
+    left: 70%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .heartrate {
+    animation: move 3s linear infinite alternate;
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-5px, 10px);
+    }
+    100% {
+      transform: translate(5px, 20px);
+    }
+  }
+  .CLBurned {
+    position: absolute;
+    top: 500px;
+    left: 10%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .CLBurned {
+    animation: move 2.5s linear infinite alternate;
+  }
+}
+/* Media queries za velicinu od 721 do 1024 */
+@media all and (min-device-width: 722px) and (max-device-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/PozadinaHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    top: 10px;
+    left: 2%;
+    width: 40px;
+  }
+  .Naslov {
+    left: 30%;
+    top: 50px;
+    font-size: 1.5rem;
+    width: 350px;
+  }
+  .nav1 a {
+    width: 100%;
+    top: 25px;
+    left: 7%;
+    font-size: 10px;
+  }
+  .nav2 a {
+    top: 6px;
+    left: 55%;
+    width: 100%;
+    font-size: 10px;
+  }
+  .Quote {
+    top: 700px;
+    left: 30%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .MotivationQuotes {
+    top: 100px;
+    left: 32%;
+    font-size: 1rem;
+    width: 300px;
+  }
+  .circle {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    z-index: 2;
+    animation: rotate360 15s linear infinite;
+  }
+  .gymRats {
+    position: absolute;
+    top: 300px;
+    left: 33%;
+    width: 350px;
+    height: 350px;
+    z-index: 3;
+  }
+  @keyframes rotate360 {
+    0% {
+      transform: translate(-50%, -56%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -56%) rotate(1turn);
+    }
+  }
+  .heartrate {
+    position: absolute;
+    top: 300px;
+    left: 65%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .heartrate {
+    animation: move 3s linear infinite alternate;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-5px, 10px);
+    }
+    100% {
+      transform: translate(5px, 20px);
+    }
+  }
+  .CLBurned {
+    position: absolute;
+    top: 500px;
+    left: 25%;
+    width: 60px;
+    height: 30px;
+    z-index: 3;
+  }
+  .CLBurned {
+    animation: move 2.5s linear infinite alternate;
+  }
+}
+/* Media queries za velicinu od 1024 */
+@media all and (min-device-width: 1025px) and (max-device-width: 1920px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/PozadinaHome.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    top: 10px;
+    left: 2%;
+    width: 80px;
+  }
+  .Naslov {
+    left: 36%;
+    top: 70px;
+    font-size: 1.8rem;
+    width: 450px;
+    color: whitesmoke;
+    text-shadow: 0px 10px 40px purple;
+  }
+  .nav1 a {
+    width: 100%;
+    top: 25px;
+    left: 6%;
+    font-size: 20px;
+  }
+  .nav2 a {
+    top: 6px;
+    left: 59%;
+    width: 100%;
+    font-size: 20px;
+  }
+  .Quote {
+    top: 800px;
+    left: 33%;
+    font-size: 1rem;
+    width: 500px;
+  }
+  .MotivationQuotes {
+    top: 130px;
+    left: 41%;
+    font-size: 1.3rem;
+    width: 300px;
+  }
+  .circle {
+    position: absolute;
+    top: 450px;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    z-index: 2;
+    animation: rotate360 15s linear infinite;
+  }
+  .gymRats {
+    position: absolute;
+    top: 200px;
+    left: 32%;
+    width: 550px;
+    height: 550px;
+    z-index: 3;
+  }
+  @keyframes rotate360 {
+    0% {
+      transform: translate(-50%, -56%) rotate(0);
+    }
+
+    100% {
+      transform: translate(-50%, -56%) rotate(1turn);
+    }
+  }
+  .heartrate {
+    position: absolute;
+    top: 270px;
+    left: 60%;
+    width: 100px;
+    height: 55px;
+    z-index: 3;
+  }
+
+  .heartrate {
+    animation: move 3s linear infinite alternate;
+  }
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(-5px, 10px);
+    }
+
+    100% {
+      transform: translate(5px, 20px);
+    }
+  }
+  .CLBurned {
+    position: absolute;
+    top: 510px;
+    left: 27%;
+    width: 130px;
+    height: 80px;
+    z-index: 3;
+  }
+  .CLBurned {
+    animation: move 2.5s linear infinite alternate;
+  }
+}

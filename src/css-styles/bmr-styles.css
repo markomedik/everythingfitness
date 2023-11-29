@@ -1,0 +1,344 @@
+/* NASLOV - DOBRODOSLICA - OPIS */
+.naslov {
+  position: absolute;
+  top: 400px;
+  left: 300px;
+  color: white;
+  font-size: 25px;
+  margin-top: 40px;
+}
+.welcome {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  top: 150px;
+  left: 100px;
+  filter: drop-shadow(0px 0px 15px rgb(86, 147, 227));
+}
+.description {
+  position: absolute;
+  text-wrap: wrap;
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  top: 450px;
+  left: 190px;
+  width: 400px;
+  margin-top: 40px;
+  z-index: 5;
+  filter: drop-shadow(0px 0px 15px black);
+}
+/* BMR CALCULATOR */
+.bmr {
+  position: absolute;
+  display: grid;
+  color: white;
+  font-size: 20px;
+  top: 150px;
+  right: 100px;
+}
+
+
+.gender-input{
+  display: flex;
+  width: 200px;
+  justify-content:start;
+  align-items: center;
+}
+
+.gender-input input,
+.gender-input span,
+.gender-input p{
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* BMR VIDEO ANIMACIJA */
+.bmr-banner {
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  width: 350px;
+  height: 350px;
+  border-radius: 40px;
+  z-index: 6;
+}
+/* BMR POPUNJAVANJE TABELE */
+#ageBmr {
+  margin-left: 70px;
+  margin-bottom: 10px;
+}
+#heightBmr {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+#weightBmr {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.activitylabel {
+  width: 210px;
+}
+#outputBmr {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color: white;
+  font-size: 50px;
+}
+/* DUGME ZA RACUNANJE */
+.button {
+  display: inline-block;
+  padding: 0.65em 1.6em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+  background: transparent;
+  text-align: center;
+  transition: all 0.2s;
+  animation: buttonbouncy 5s infinite linear;
+  position: relative;
+  width: 280px;
+}
+.button:hover {
+  background-color: blueviolet;
+  color: white;
+  border-radius: 10px;
+  font-style: italic;
+}
+@keyframes buttonbouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+/* PROZOR SA REZULTATOM */
+.result-window {
+  display: none;
+  position: absolute;
+  top: 580px;
+  left: 1550px;
+  height: 250px;
+  width: 300px;
+  background-color: transparent;
+  margin-top: 20px;
+  transform:scale(0.9);
+}
+.result-content {
+  height: 300px;
+  width: 280px;
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  background-color: transparent;
+  filter: drop-shadow(0px 0px 15px black);
+  text-wrap: wrap;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.7);
+  }
+}
+.close-result {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: -30px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  color: blueviolet;
+}
+.close-result:hover{
+  color: red;
+}
+/* Manji Mobilni Telefoni */
+@media all 
+and (max-width : 360px)  { 
+  .naslov, 
+  .welcome,
+  .bmr-banner,
+  .description{
+    display: none;
+  }
+  .bmr {
+    display: grid;
+    color: white;
+    font-size: 20px;
+    top: 150px;
+    left: 60%;
+    transform: scale(0.7);
+  }
+  .result-window {
+    display: none;
+    top: 250px;
+    left: -5%;
+    height: 200px;
+    width: 300px;
+    background-color: transparent;
+    margin-top: 20px;
+    transform: scale(0.7);
+  }
+  .result-content {
+    height: 300px;
+    width: 280px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 15px black);
+    text-wrap: wrap;
+    transform: scale(0.7);
+  }
+}
+/* Veci Mobilni Telefoni */
+@media all
+and (min-device-width : 361px) 
+and (max-device-width : 520px) {
+  .naslov, 
+  .welcome,
+  .bmr-banner,
+  .description{
+    display: none;
+  }
+  .bmr {
+    display: grid;
+    color: white;
+    font-size: 20px;
+    top: 150px;
+    left: 60%;
+    transform: scale(0.7);
+  }
+  .result-window {
+    display: none;
+    top: 250px;
+    left: -5%;
+    height: 200px;
+    width: 300px;
+    background-color: transparent;
+    margin-top: 20px;
+    transform: scale(0.7);
+  }
+  .result-content {
+    height: 300px;
+    width: 280px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 15px black);
+    text-wrap: wrap;
+    transform: scale(0.7);
+  }
+}
+/* SREDNJA VELICINA 521 do 721 */
+@media all
+and (min-device-width : 521px) 
+and (max-device-width : 721px) {
+  .naslov, 
+  .welcome,
+  .bmr-banner,
+  .description{
+    display: none;
+  }
+  .bmr {
+    display: grid;
+    color: white;
+    font-size: 20px;
+    top: 150px;
+    left: 60%;
+    transform: scale(0.7);
+  }
+  .result-window {
+    display: none;
+    top: 250px;
+    left: -5%;
+    height: 200px;
+    width: 300px;
+    background-color: transparent;
+    margin-top: 20px;
+    transform: scale(0.7);
+  }
+  .result-content {
+    height: 300px;
+    width: 280px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 15px black);
+    text-wrap: wrap;
+    transform: scale(0.7);
+  }
+}
+/* SREDNJA VELICINA 721 do 1024 */
+@media all
+and (min-device-width : 722px) 
+and (max-device-width : 1024px) {
+  .naslov, 
+  .welcome,
+  .bmr-banner,
+  .description{
+    display: none;
+  }
+  .bmr {  
+    display: grid;
+    color: white;
+    font-size: 20px;
+    top: 150px;
+    left: 70%;
+    transform: scale(0.9);
+  }
+  .result-window {
+    display: none;
+    top: 250px;
+    left: 5%;
+    height: 200px;
+    width: 300px;
+    background-color: transparent;
+    margin-top: 20px;
+    transform: scale(0.9);
+  }
+  .result-content {
+    height: 300px;
+    width: 280px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: transparent;
+    filter: drop-shadow(0px 0px 15px black);
+    text-wrap: wrap;
+    transform: scale(0.9);
+  }
+}
+/* FULL HD :D od 1024 */
+@media all
+and (min-device-width : 1025px) 
+and (max-device-width : 1920px) {
+}
